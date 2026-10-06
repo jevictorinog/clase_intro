@@ -1,0 +1,187 @@
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    margin: 0;
+    background: radial-gradient(circle at 30% 70%, rgb(251, 232, 201), #f8f8f8, #f6f6f6, rgb(212, 212, 249));
+}
+
+/* ===== LAYOUT PRINCIPAL ===== */
+.dashboard-container {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    height: 100vh; 
+    width: 100vw;
+    /*background-color: #f6f6f6;*/
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+    background-color: #1e1e1e;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    /*border-radius: 10px;*/
+}
+
+.logo {
+    letter-spacing: 1px;
+    font-weight: 700;
+    font-size: 1.2em;
+    margin-bottom: 60px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-item {
+    padding: 10px 15px;
+    margin: 8px 5px;
+    opacity: 0.8;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.menu a{
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.menu a:visited{
+    color: #fafafa;
+}
+
+.menu-item:hover,
+.menu-item.active {
+    /*background-color: rgba(255,255,255,0.1);*/
+    box-shadow: 2px 0 10px rgba(255,220,128,0.2);
+    opacity: 1;
+    color: #00bcd4;
+}
+
+.user-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 10px;
+    margin-top: 20px;
+}
+
+.avatar {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+/* ===== CONTENIDO PRINCIPAL ===== */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    overflow-y: auto;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2px;
+}
+
+.search-input {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.date-display {
+    font-size: 0.9em;
+    color: #555;
+    margin-left: 10px;
+}
+
+/* KPI CARDS */
+.kpi-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.kpi-card {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    /*box-shadow: 0 2px 10px rgba(0,0,0,0.05);*/
+}
+
+.kpi-title {
+    font-size: 0.9em;
+    color: #777;
+}
+
+.kpi-value {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.kpi-change {
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+.kpi-change.positive { color: #27ae60; }
+.kpi-change.negative { color: #e74c3c; }
+
+/* CONTENT GRID */
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    height: 100%;
+}
+
+/* CARDS */
+.content-card {
+    background: white;
+    border-radius: 10px;
+    padding: 5px;
+    /*box-shadow: 0 2px 10px rgba(0,0,0,0.05);*/
+    gap: 15px;
+}
+
+.left-panel {
+    gap: 10px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.section-title {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* LISTAS */
+.reservations-list, .menu-items {
+    list-style: none;
+    padding-left: 0;
+}
+
+.reservations-list li,
+.menu-items li {
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+}
